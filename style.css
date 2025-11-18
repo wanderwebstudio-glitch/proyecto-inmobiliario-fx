@@ -1,5 +1,6 @@
         :root {
             --primary: #0a2540;
+            --black: #000000;
             --primary-light: #1e73be;
             --secondary: #1e73be;
             --accent: #8b0000;
@@ -490,4 +491,147 @@
 
 .property-carousel img.active {
     display: block;
+}
+
+        /* Sobre la Dra */
+        .about {
+            padding: 100px 0;
+            color: var(--black) !important;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--primary);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+
+            
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+
+        }
+
+        .owner-section {
+            position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #ffffff; /* Fondo blanco */
+}
+/* Estilos solo para móviles */
+@media (max-width: 576px) {
+.owner-section img{
+    position: absolute;
+transform: scale(0.4);
+top: 0;
+right: 0px;
+}
+
+
+}
+.owner-card {
+  background: #f8faff; /* Blanco ligeramente azulado */
+  border: 2px solid #1e4bb8; /* Azul principal */
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 800px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.owner-photo {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #1e4bb8; /* Azul */
+  
+}
+
+.owner-info {
+  flex: 1;
+}
+
+.owner-name {
+  font-size: 28px;
+  color: #1e4bb8; /* Azul principal */
+  margin-bottom: 5px;
+}
+
+.owner-role {
+  font-size: 18px;
+  color: #12307a;
+  margin-bottom: 15px;
+}
+
+.owner-desc {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+/*contador numeros*/
+.counter-box {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.counter {
+font-size: 2.5rem;
+font-weight: bold;
+}
+
+
+.label {
+font-size: 1.1rem;
+margin-top: 5px;
+color: #0a3d91;
 }
