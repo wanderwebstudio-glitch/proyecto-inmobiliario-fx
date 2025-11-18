@@ -41,4 +41,44 @@ document.querySelectorAll('.property-carousel').forEach(carousel => {
     };
 });
 
+//animacon numeros
+function animateCounter(id, endValue, duration) {
+let startValue = 0;
+let startTime = null;
 
+
+function animationStep(currentTime) {
+if (!startTime) startTime = currentTime;
+const progress = Math.min((currentTime - startTime) / duration, 1);
+const value = Math.floor(progress * endValue);
+document.getElementById(id).textContent = value;
+if (progress < 1) requestAnimationFrame(animationStep);
+}
+
+
+requestAnimationFrame(animationStep);
+}
+
+
+const options = { threshold: 0.5 };
+
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting && !entry.target.dataset.animated) {
+const target = entry.target;
+const endValue = parseInt(target.dataset.value);
+animateCounter(target.id, endValue, 2000);
+target.dataset.animated = "true";
+}
+});
+}, options);
+
+
+document.querySelectorAll('.counter').forEach(counter => {
+observer.observe(counter);
+});
+
+document.querySelectorAll('.counter').forEach(counter => {
+observer.observe(counter);
+});
