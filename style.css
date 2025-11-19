@@ -58,7 +58,7 @@
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(10, 37, 64, 0.473), rgba(10, 37, 64, 0.527)), url('img/paisage-03.webp');
+            background-image:url('img/paisage-03.webp');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -447,7 +447,9 @@
 .div-inicio span{
     font-size: 20px;
 }
-
+.div-inicio{
+    margin-top: -50px;
+}
 /* --- ESTILOS DEL CARRUSEL --- */
 .property-carousel {
     position: relative;
@@ -635,3 +637,41 @@ font-size: 1.1rem;
 margin-top: 5px;
 color: #0a3d91;
 }
+/*formulario margin*/
+.form-control{
+margin: 10px;
+}
+
+
+    .more-container {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .social-dropdown {
+        display: none;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        min-width: 120px;
+    }
+
+    .more-container:hover .social-dropdown {
+        display: block;
+    }
+
+    .social-dropdown a {
+        display: block;
+        padding: 5px 0;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .social-dropdown a:hover {
+        background-color: #f0f0f0;
+    }
