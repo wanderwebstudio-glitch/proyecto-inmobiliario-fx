@@ -82,3 +82,57 @@ observer.observe(counter);
 document.querySelectorAll('.counter').forEach(counter => {
 observer.observe(counter);
 });
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const asunto = document.getElementById("asunto").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    // Número proporcionado
+    const phone = "18294244979";
+
+    // Construir texto del mensaje
+    const text = `Nombre: ${nombre}%0AEmail: ${email}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
+
+    // Crear URL de WhatsApp
+    const url = `https://wa.me/${phone}?text=${text}`;
+
+    // Abrir WhatsApp
+    window.open(url, "_blank");
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const asunto = document.getElementById("asunto").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    const phone = "18574925572";
+
+    const text = `Nombre: ${nombre}%0AEmail: ${email}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
+
+    const url = `https://wa.me/${phone}?text=${text}`;
+
+    // Abrir WhatsApp
+    window.open(url, "_blank");
+
+    // Limpiar formulario
+    document.getElementById("contactForm").reset();
+
+    // Pintar de verde para confirmar envío
+    const form = document.getElementById("contactForm");
+    form.style.border = "2px solid green";
+    form.style.padding = "10px";
+    form.style.transition = "0.3s";
+
+    // Quitar el borde verde después de 3 segundos (opcional)
+    setTimeout(() => {
+        form.style.border = "none";
+    }, 3000);
+});
